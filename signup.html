@@ -5,14 +5,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Poetsen+One&family=Tapestry&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup - PerfumeParadise</title>
+    <title>SignUp - PerfumeParadise</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: teal;
-            color: #333;
+            color: rgb(1, 59, 59);
             margin: 0;
             padding: 0;
             height: 100%;
@@ -25,7 +26,6 @@
             text-align: left; 
             height: 150px;
             font-family: "Courgette", cursive;
-            
         }
         header h1 {
             margin: 0;
@@ -41,75 +41,66 @@
             top: 88px;
             left: 690px;
         }
-        nav {
-            text-align: center;
-            padding: 10px;
-        } 
-        nav a, nav button {
-            padding: 10px 20px;
-            color: rgb(1, 59, 59);
-            margin: 10px;
-            border-radius: 5px;
-            display: inline-block;
+        .container {
+            width: 450px;
+            height: 452px;
+            margin: 50px auto;
             background-color: rgba(255, 255, 255, 0.8);
-            border: none;
-            transition: all 0.3s ease;
-        }
-        nav a:hover, nav button:hover {
-            background-color: rgba(255, 255, 255, 0.7);
-        }
-        .form-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-top: 50px;
-            color: rgb(1, 59, 59);
-           
-        }
-        form {
             padding: 20px;
-            border-radius: 10px;
-            width: 400px;
-            box-sizing: border-box;
-            position: relative;
-            background-color: rgb(189, 231, 231);
+            border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-       
+            font-family: "Noto Serif", serif;
         }
         h2 {
-            border-bottom: 1px solid black;
             text-align: center;
+            border-bottom: 0.7px rgb(1, 59, 59) solid;
+            font-family: "Noto Serif", serif;
+        }
+        form {
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
         }
         label {
-            margin-bottom: 5px;
+            display: block;
             font-weight: bold;
-            display: flex;
-            align-content: center;
+            text-align: left;
         }
         input[type="text"], input[type="email"], input[type="password"] {
-            margin-bottom: 15px;
+            width: 100%;
             padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #FFFFFF;
-            width: 300%;
-            width: 300px;
-            margin: 10px 0;
+            border: 1px solid white;
+            border-radius: 4px;
+            box-sizing: border-box;
         }
-        input[type="submit"] {
-            width: 320px;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
+        .required::after {
+            content: " *";
+            color: red;
+        }
+        button {
+            width: 100%;
             background-color: rgb(1, 59, 59);
-            color: #fff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s;
         }
-        body{
-        background-color:  rgb(8, 118, 118);
+        button:hover {
+            background-color: teal;
+        }
+        .switch-form {
+            margin-top: 10px;
+            color: black;
+            display: flex;
+            justify-content: center;
+        }
+    
+        .switch-form a {
+            color:black;
+            font-weight: bold;
         }
         footer {
             background-color: rgba(0, 0, 0, 0.8);
@@ -118,129 +109,81 @@
             text-align: center;
             position: fixed;
             bottom: 0;
-            width: 100%;  
+            width: 100%;
         }
-        .star::after {
-            content: '*';
-            color: #FF0909;
-            margin-left: 5px;
-            font-size: 12px;
+        #b1 {
+            width: 150px;
+            padding: 10px 20px;
+            color: whitesmoke;
+            height: 43px;
+            margin: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            background-color: rgb(5, 46, 46);
+            border: none;
+            transition: all 0.3s ease;
+            position: absolute;
+            left: 850px;
+            top: 755px;
         }
-        u1{
-            color: #0000;
+        #i2 {
+            height: 150px;
+            width: 150px;
+            border-radius: 31px;
+            position: absolute;
+            top: 15px;
+            left: 25px;
         }
-    </style>
-</head>
-<body>
-    <div class="form-container">
-        <form>
-            <h2>Signup</h2>
-            <label for="username" class="star">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="email" class="star">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="password" class="star">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <label for="confirm-password" class="star">Confirm Password:</label>
-            <input type="password" id="confirm-password" name="confirm-password" required>
-            <input type="submit" value="Signup">
-            <div class="switch-form">Already have an account? <a href="login.html" id="u1"><em><u>Login</u></em></div>
-        </form>
-    </div>
-    <footer>
-        <p>&COPY; 2024, PerfumeParadise</p>
-    </footer>
-</body>
-</html>
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <style>
-        .form-container {
+        #f1 {
+            color: whitesmoke;
             display: flex;
             justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-top: 50px;
+            padding: 2px;
         }
-    
-        .form-container form {
-            background-color: rgb(189, 231, 231);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
-            text-align: center;
-        }
-    
-        .form-container input[type="text"],
-        .form-container input[type="password"],
-        .form-container input[type="email"] {
-            width: 300px;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-    
-        .form-container input[type="submit"] {
-            width: 320px;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
-            background-color: rgb(1, 59, 59);
-            color: #fff;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-    
-        .form-container input[type="submit"]:hover {
-            background-color: #555;
-        }
-    
-        .form-container .switch-form {
-            margin-top: 10px;
-        }
-    
-        .form-container .switch-form a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-        /* .star::after {
-            content: '*';
-            color: #FF0909;
-            margin-left: 5px;
-            font-size: 12px;
-        } */
-        body{
-        background-color:  rgb(8, 118, 118);
-        }
+
     </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup - PerfumeParadise</title>
-    <link rel="stylesheet" href="web.html">
-</head>
-<body>
-    <div class="form-container">
-        <form id="signup-form">
-            <h2>Signup</h2>
-            <input type="text" placeholder="Username" required>
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
-            <input type="password" placeholder="Confirm Password" required>
-            <input type="submit" value="Signup">
-            <div class="switch-form">Already have an account? <a href="login.html"><em><u>Login</strong></u></em></div>
+  </head>
+  <body>
+    <img src="logo5.png" id="i2">
+    <header>
+            <h1>Welcome to PerfumeParadise</h1>
+            <h3 class="tagline">Unlock the Essence of Elegance. Perfume Paradise Awaits.</h3>
+    </header>
+
+        <div class="container">
+        <h2>Sign Up</h2>
+        <form>
+            <div class="form-group">
+                <label for="username" class="required">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email" class="required">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password" class="required">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password" class="required">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm password" required>
+            </div>
+            <button type="submit">Sign Up</button>
+            <div class="switch-form">Already have an account? <a href="login.html"><em><u>Login</u></em></a></div>
         </form>
-    </div>
-</body>
-</html>
- -->
+        <a href="main.html" class="#"><button id="b1">Back to Home</button></a>
+        </div>
+
+    <footer>
+        <p id="f1">&copy; 2024 PerfumeParadise. By Janvi.</p>
+    </footer>
+  </body>
+  </html>
+
+
+
+
+
+
+    
